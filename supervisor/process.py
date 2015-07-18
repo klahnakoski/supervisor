@@ -593,7 +593,11 @@ class Subprocess(object):
         if self.config.options.mood > SupervisorStates.RESTARTING:
             # dont start any processes if supervisor is shutting down
             if state == ProcessStates.EXITED:
-                if self.config.autorestart:
+                if self.config.startintervalsecs:
+                    if not self.laststart or now > self.laststart + self.config.startintervalsecs:
+                        # EXITED -> STARTING
+                        self.spawn()
+                elif self.config.autorestart:
                     if self.config.autorestart is RestartUnconditionally:
                         # EXITED -> STARTING
                         self.spawn()

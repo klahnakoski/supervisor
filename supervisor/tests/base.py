@@ -506,7 +506,7 @@ class DummyProcess(object):
 
 class DummyPConfig:
     def __init__(self, options, name, command, directory=None, umask=None,
-                 priority=999, autostart=True,
+                 priority=999, autostart=True, startintervalsecs=None,
                  autorestart=True, startsecs=10, startretries=999,
                  uid=None, stdout_logfile=None, stdout_capture_maxbytes=0,
                  stdout_events_enabled=False,
@@ -522,6 +522,7 @@ class DummyPConfig:
         self.command = command
         self.priority = priority
         self.autostart = autostart
+        self.startintervalsecs = startintervalsecs
         self.autorestart = autorestart
         self.startsecs = startsecs
         self.startretries = startretries

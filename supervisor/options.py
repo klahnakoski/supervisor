@@ -865,6 +865,7 @@ class ServerOptions(Options):
 
         priority = integer(get(section, 'priority', 999))
         autostart = boolean(get(section, 'autostart', 'true'))
+        startintervalsecs = integer(get(section, 'startintervalsecs', 0))
         autorestart = auto_restart(get(section, 'autorestart', 'unexpected'))
         startsecs = integer(get(section, 'startsecs', 1))
         startretries = integer(get(section, 'startretries', 3))
@@ -964,6 +965,7 @@ class ServerOptions(Options):
                 umask=umask,
                 priority=priority,
                 autostart=autostart,
+                startintervalsecs=startintervalsecs,
                 autorestart=autorestart,
                 startsecs=startsecs,
                 startretries=startretries,
@@ -1768,7 +1770,7 @@ class Config(object):
 class ProcessConfig(Config):
     req_param_names = [
         'name', 'uid', 'command', 'directory', 'umask', 'priority',
-        'autostart', 'autorestart', 'startsecs', 'startretries',
+        'autostart', 'startintervalsecs', 'autorestart', 'startsecs', 'startretries',
         'stdout_logfile', 'stdout_capture_maxbytes',
         'stdout_events_enabled', 'stdout_syslog',
         'stdout_logfile_backups', 'stdout_logfile_maxbytes',
