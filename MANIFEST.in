@@ -2,7 +2,7 @@ include CHANGES.txt
 include CONTRIBUTORS.txt
 include COPYRIGHT.txt
 include LICENSES.txt
-include README.rst
+include README.md
 include TODO.txt
 include tox.ini
 include supervisor/version.txt

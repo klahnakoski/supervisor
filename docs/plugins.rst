@@ -5,7 +5,7 @@ There are a number of third party applications that can be useful together
 with Supervisor. This list aims to summarize them and make them easier
 to find.
 
-See README.rst for information on how to contribute to this list.
+See README.md for information on how to contribute to this list.
 Obviously, you can always also send an e-mail to the Supervisor mailing
 list to inform about missing plugins or libraries for/using Supervisor.
 

@@ -35,16 +35,17 @@ testing_extras = tests_require + [
 from setuptools import setup, find_packages
 here = os.path.abspath(os.path.dirname(__file__))
 try:
-    README = open(os.path.join(here, 'README.rst')).read()
+    README = open(os.path.join(here, 'README.txt')).read()
+except Exception, e:
+    README = "Supervisor is a client/server system that allows its users to control a number of processes on UNIX-like operating systems."
+
+try:
     CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
-except:
-    README = """\
-Supervisor is a client/server system that allows its users to
-control a number of processes on UNIX-like operating systems. """
+except Exception, e:
     CHANGES = ''
 
 CLASSIFIERS = [
-    'Development Status :: 5 - Production/Stable',
+    'Development Status :: 4 - Beta',
     'Environment :: No Input/Output (Daemon)',
     'Intended Audience :: System Administrators',
     'Natural Language :: English',
@@ -66,17 +67,17 @@ version_txt = os.path.join(here, 'supervisor/version.txt')
 supervisor_version = open(version_txt).read().strip()
 
 dist = setup(
-    name='supervisor',
-    version=supervisor_version,
+    name='supervisor_plus_cron',
+    version="1.0.15199",
     license='BSD-derived (http://www.repoze.org/LICENSE.txt)',
-    url='http://supervisord.org/',
-    description="A system for controlling process state under UNIX",
+    url='https://github.com/klahnakoski/supervisor_plus_cron',
+    description="From " + supervisor_version + ": A system for controlling process state under UNIX, plus CRON!",
     long_description=README + '\n\n' + CHANGES,
     classifiers=CLASSIFIERS,
     author="Chris McDonough",
     author_email="chrism@plope.com",
-    maintainer="Chris McDonough",
-    maintainer_email="chrism@plope.com",
+    maintainer="Kyle Lahnakoski",
+    maintainer_email="kyle@lahnakoski.com",
     packages=find_packages(),
     install_requires=requires,
     extras_require={

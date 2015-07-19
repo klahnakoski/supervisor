@@ -1350,7 +1350,7 @@ class ServerOptions(Options):
                        'The current environment will only allow you '
                        'to open %(hard)s file descriptors.  Either raise '
                        'the number of usable file descriptors in your '
-                       'environment (see README.rst) or lower the '
+                       'environment (see README.md) or lower the '
                        'minfds setting in the config file to allow '
                        'the process to start.'),
                 'min':self.minfds,
@@ -1366,7 +1366,7 @@ class ServerOptions(Options):
                        'The current environment will only allow you '
                        'to open %(hard)s processes.  Either raise '
                        'the number of usable processes in your '
-                       'environment (see README.rst) or lower the '
+                       'environment (see README.md) or lower the '
                        'minprocs setting in the config file to allow '
                        'the program to start.'),
                 'min':self.minprocs,
