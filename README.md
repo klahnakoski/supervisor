@@ -25,4 +25,4 @@ Contributing
 ------------
 
 If you would like to make this CRON feature better, work is being done at 
-[https://github.com/klahnakoski/supervisor_plus_cron](https://github.com/klahnakoski/supervisor_plus_cron).
+[https://github.com/klahnakoski/supervisor-plus-cron](https://github.com/klahnakoski/supervisor-plus-cron).
