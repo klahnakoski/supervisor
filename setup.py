@@ -68,7 +68,7 @@ supervisor_version = open(version_txt).read().strip()
 
 dist = setup(
     name='supervisor-plus-cron',
-    version="1.0.15200",
+    version="1.0.15201",
     license='BSD-derived (http://www.repoze.org/LICENSE.txt)',
     url='https://github.com/klahnakoski/supervisor-plus-cron',
     description="From " + supervisor_version + ": A system for controlling process state under UNIX, plus CRON!",
